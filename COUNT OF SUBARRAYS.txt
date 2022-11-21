@@ -1,24 +1,4 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-
-using namespace std;
-
-#define ll long long
-
-
-// } Driver Code Ends
-//User function template for C++
-class Solution{
-public:
-	// #define ll long long
-
-	ll countSubarray(int arr[], int N, int k) {
-	    // code here
-	                
-ll n = N;
-ll c = 0 ; //count values that are <=k
-ll ans = 0 ; // stores the sum of possible subarrays with that current value of c which tells subarrays <=k
-                                                              COUNT OF SUBARRAYS(POTD)
+                                                             COUNT OF SUBARRAYS(POTD)
 Given an array of N positive integers  Arr1, Arr2 ............ Arrn. The value of each contiguous subarray of given array is the maximum element present in that subarray. The task is to return the number of subarrays having value strictly greater than K.
 
 Example 1:
@@ -48,6 +28,28 @@ Expected Auxiliary Space: O(1)
 Constraints:
 1 <= N <= 105
 1 <= Arr[i] <= 105
+
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long
+
+
+// } Driver Code Ends
+//User function template for C++
+class Solution{
+public:
+	// #define ll long long
+
+	ll countSubarray(int arr[], int N, int k) {
+	    // code here
+	                
+ll n = N;
+ll c = 0 ; //count values that are <=k
+ll ans = 0 ; // stores the sum of possible subarrays with that current value of c which tells subarrays <=k
+ 
 for(int i = 0 ; i < n ; i++){
     if(arr[i]>k){
        ans+=c*(c+1)/2;
